@@ -1,0 +1,65 @@
+{
+  "name": "v-calendar",
+  "version": "1.0.0-beta.16",
+  "description": "A clean and extendable plugin for building simple attributed calendars in Vue.js.",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "plugin",
+    "calendar",
+    "datepicker",
+    "date picker",
+    "highlights",
+    "dots",
+    "bars",
+    "indicators"
+  ],
+  "homepage": "https://vcalendar.io",
+  "author": "Nathan Reyes <nathanreyes@me.com>",
+  "main": "lib/v-calendar.umd.min.js",
+  "files": [
+    "src",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nathanreyes/v-calendar"
+  },
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "serve": "vue-cli-service serve src/lib.js",
+    "build": "vue-cli-service build --target lib src/lib.js",
+    "test": "vue-cli-service test:unit --watch",
+    "lint": "vue-cli-service lint",
+    "dev": "vuepress dev docs",
+    "build:docs": "vuepress build docs",
+    "deploy:docs": "vuepress build docs && netlify deploy"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "popper.js": "^1.14.7"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.1.0",
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-plugin-unit-jest": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^22.0.4",
+    "postcss-preset-env": "^6.6.0",
+    "tailwindcss": "^1.0.0-beta.3",
+    "vuepress": "^1.0.0-alpha.46"
+  },
+  "peerDependencies": {
+    "vue": "^2.5.18"
+  },
+  "browserslist": [
+    ">1%",
+    "not ie 11",
+    "not op_mini all"
+  ]
+}
