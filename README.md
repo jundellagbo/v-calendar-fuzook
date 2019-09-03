@@ -53,3 +53,21 @@ For full documentation, visit [vcalendar.io](https://vcalendar.io/).
 ### Custom Calendars w/ Scoped Slots
 
 <img width="400" src="https://res.cloudinary.com/dqgcfqzpk/image/upload/v1557328504/v-calendar/custom-calendars.png">
+
+### Adding New Events:
+```bash
+invalidrange
+```
+selecting dates with unavailable days in between
+
+### Date Classes implmented
+
+```bash
+vc-disabled-date--
+```
+Disabled date class
+
+```bash
+vc-prev-dates--
+```
+Previous date class
