@@ -71,3 +71,8 @@ Disabled date class
 vc-prev-dates--
 ```
 Previous date class
+
+```bash
+vc-today-date--
+```
+Current date class
