@@ -127,6 +127,10 @@ export default {
       {
         class: [
           'vc-day',
+          'vc-test-day',
+          { 'vc-prev-dates--': this.prevDate },
+          { 'vc-today-date--': this.todayDate },
+          { 'vc-disabled-date--': this.isDisabled },
           ...this.day.classes,
           { 'vc-day-box-center-center': !this.$scopedSlots['day-content'] },
         ],
@@ -153,6 +157,14 @@ export default {
     };
   },
   computed: {
+    prevDate() {
+      const curDate = new Date(new Date().toDateString());
+      const theDate = new Date(this.day.date);
+      return curDate > theDate;
+    },
+    todayDate() {
+      return this.day.isToday;
+    },
     label() {
       return this.day.label;
     },

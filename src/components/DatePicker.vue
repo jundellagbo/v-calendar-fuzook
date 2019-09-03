@@ -113,6 +113,7 @@ export default {
       doAdjustPageRange: false,
       updateTimeout: null,
       datePickerPopoverId: createGuid(),
+      clickedDay: 0,
     };
   },
   computed: {
@@ -230,8 +231,17 @@ export default {
       this.refreshValue();
     },
     value_(val) {
+      this.clickedDay = 0;
       this.$emit('input', val);
       this.handleValueChange();
+    },
+    clickedDay(val) {
+      if (this.mode == 'range' && val > 1) {
+        this.value_ = null;
+        this.dragValue = null;
+        this.clickedDay = 0;
+        this.$emit('invalidrange');
+      }
     },
     dragValue(val) {
       this.formatInput();
@@ -279,7 +289,10 @@ export default {
     onDayClick(day) {
       this.picker.handleDayClick(day, this);
       // Re-emit event
-      this.$emit('dayclick', day);
+      // this.$emit('dayclick', day);
+      if (this.dragValue && (this.mode == 'range' && !day.isDisabled)) {
+        this.clickedDay++;
+      }
     },
     onDayMouseEnter(day) {
       this.picker.handleDayMouseEnter(day, this);
