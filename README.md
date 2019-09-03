@@ -16,7 +16,7 @@
 ------
 
 ```bash
-npm i --save v-calendar@next
+npm i --save https://github.com/jundellagbo/v-calendar-fuzook.git
 ```
 
 ## Documentation
